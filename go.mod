@@ -1,4 +1,4 @@
-module github.com/username/my-site
+module github.com/CapnSammeh/servicely-docs
 
 go 1.24.3
 
