@@ -1,0 +1,36 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Servicely Docs
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+# Navigation Menu
+menu:
+  main:
+    - name: Documentation
+      pageRef: /docs
+      weight: 1
+
+# Theme Configuration
+params:
+  # Logo & Title
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: images/logo.svg
+      dark: images/logo-dark.svg
+      link: /
+      width: 30
+
+  # Search
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+
+  # Page Settings
+  page:
+    width: full
