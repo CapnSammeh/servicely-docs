@@ -8,7 +8,7 @@
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/configuration_management/cmdb-permissions/</loc>
+    <loc>http://localhost:1313/docs/configuration_management/configuration_management/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/configuration_management/</loc>
   </url><url>
@@ -16,6 +16,10 @@
   </url><url>
     <loc>http://localhost:1313/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/shortcodes/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/configuration-management/</loc>
   </url>
 </urlset>

@@ -10,5 +10,54 @@
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+CMS.registerEditorComponent({
+  // Internal id of the component
+  id: "callout",
+  // Visible label
+  label: "Callout",
+  // Fields the user need to fill out when adding an instance of the component
+  fields: [
+    {
+      name: 'type',
+      label: 'Type',
+      widget: 'select',
+      options: ["info", "error", "warning"]
+    },
+    {
+      name: 'content',
+      label: 'Content',
+      widget: 'markdown'
+    }
+  ],
+  pattern: /^{{<callout type=\"(.*?)\"\>}}(.*?){{\<\/callout>}}$/ms,
+  
+  fromBlock: function(match) {
+    return {
+      type: match[1],
+      content: match[2]
+    };
+  },
+  // Given an object with one property for each field defined in `fields`,
+  // return the string you wish to be inserted into your markdown.
+  //
+  // This is used to serialize the data from the custom widget to the
+  // markdown document
+  toBlock: function(data) {
+    return `{{<callout type="${data.type}">}}${data.content}{{</callout>}}`;
+  },
+  // Preview output for this component. Can either be a string or a React component
+  // (component gives better render performance)
+  toPreview: function(data) {
+    return `
+{{ <callout type=${data.type}> }}
+  ${data.content}
+{{</callout>}}
+`;
+  }
+});
+</script>
   </body>
 </html>
+
+{{<callout type="info">}}This is my content{{</callout>}}
