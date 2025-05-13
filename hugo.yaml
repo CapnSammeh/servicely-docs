@@ -24,13 +24,13 @@ params:
       link: /
       width: 30
 
-  # # Search
-  # search:
-  #   enable: true
-  #   type: flexsearch
-  #   flexsearch:
-  #     index: content
+  # Search
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
 
-  # # Page Settings
-  # page:
-  #   width: full
+  # Page Settings
+  page:
+    width: full
