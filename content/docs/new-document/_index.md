@@ -1,5 +1,5 @@
 ---
 title: This is a new Document
-draft: true
+draft: false
 ---
 This is new
