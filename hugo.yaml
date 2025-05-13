@@ -19,18 +19,18 @@ params:
     displayTitle: true
     displayLogo: true
     logo:
-      path: /images/logo.svg
-      dark: /images/logo-dark.svg
+      path: images/logo.svg
+      dark: images/logo-dark.svg
       link: /
       width: 30
 
-  # Search
-  search:
-    enable: true
-    type: flexsearch
-    flexsearch:
-      index: content
+  # # Search
+  # search:
+  #   enable: true
+  #   type: flexsearch
+  #   flexsearch:
+  #     index: content
 
-  # Page Settings
-  page:
-    width: full
+  # # Page Settings
+  # page:
+  #   width: full
