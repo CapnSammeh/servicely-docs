@@ -1,8 +1,6 @@
 ---
 title: Getting Started
 draft: false
-# date: 2025-05-13T10:06:00.000Z
-# description: This is my description
 ---
 This is some documentation!
 
