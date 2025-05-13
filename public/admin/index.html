@@ -1,63 +1,147 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
-    <!-- Include the script that enables Netlify Identity on this page. -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  </head>
-  <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-    <script>
-CMS.registerEditorComponent({
-  // Internal id of the component
-  id: "callout",
-  // Visible label
-  label: "Callout",
-  // Fields the user need to fill out when adding an instance of the component
-  fields: [
-    {
-      name: 'type',
-      label: 'Type',
-      widget: 'select',
-      options: ["info", "error", "warning"]
-    },
-    {
-      name: 'content',
-      label: 'Content',
-      widget: 'markdown'
-    }
-  ],
-  pattern: /^{{<callout type=\"(.*?)\"\>}}(.*?){{\<\/callout>}}$/ms,
-  
-  fromBlock: function(match) {
-    return {
-      type: match[1],
-      content: match[2]
-    };
-  },
-  // Given an object with one property for each field defined in `fields`,
-  // return the string you wish to be inserted into your markdown.
-  //
-  // This is used to serialize the data from the custom widget to the
-  // markdown document
-  toBlock: function(data) {
-    return `{{<callout type="${data.type}">}}${data.content}{{</callout>}}`;
-  },
-  // Preview output for this component. Can either be a string or a React component
-  // (component gives better render performance)
-  toPreview: function(data) {
-    return `
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+  <!-- Include the script that enables Netlify Identity on this page. -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body>
+  <!-- Include the script that builds the page and powers Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Hextra Callout Editor Component
+    CMS.registerEditorComponent({
+      // Internal id of the component
+      id: "callout",
+      // Visible label
+      label: "Callout",
+      // Fields the user need to fill out when adding an instance of the component
+      fields: [
+        {
+          name: 'type',
+          label: 'Type',
+          widget: 'select',
+          options: ["info", "error", "warning"]
+        },
+        {
+          name: 'content',
+          label: 'Content',
+          widget: 'markdown'
+        }
+      ],
+      pattern: /^{{<callout type=\"(.*?)\"\>}}(.*?){{\<\/callout>}}$/ms,
+
+      fromBlock: function (match) {
+        return {
+          type: match[1],
+          content: match[2]
+        };
+      },
+      // Given an object with one property for each field defined in `fields`,
+      // return the string you wish to be inserted into your markdown.
+      //
+      // This is used to serialize the data from the custom widget to the
+      // markdown document
+      toBlock: function (data) {
+        return `{{<callout type="${data.type}">}}${data.content}{{</callout>}}`;
+      },
+      // Preview output for this component. Can either be a string or a React component
+      // (component gives better render performance)
+      toPreview: function (data) {
+        return `
 {{ <callout type=${data.type}> }}
   ${data.content}
 {{</callout>}}
 `;
-  }
-});
-</script>
-  </body>
-</html>
+      }
+    });
+  </script>
+  <script>
+    // Hextra Cards Editor Component
+    CMS.registerEditorComponent({
+      // Internal id of the component
+      id: "card",
+      // Visible label
+      label: "card",
+      // Fields the user need to fill out when adding an instance of the component
+      fields: [
+        {
+          name: 'link',
+          label: 'Link',
+          widget: 'string',
+          default: ''
+        },
+        {
+          name: 'title',
+          label: 'Title',
+          widget: 'string',
+          default: ''
+        },
+        {
+          name: 'subtitle',
+          label: 'Subtitle',
+          widget: 'string',
+          default: ''
+        },
+        {
+          name: 'image',
+          label: 'Image',
+          widget: 'file'
+        },
+        {
+          name: 'icon',
+          label: 'icon',
+          widget: 'string',
+          default: 'tag'
+        },
+        {
+          name: 'tag',
+          label: 'Tag',
+          widget: 'string',
+          default: ''
+        },
+        {
+          name: 'tagType',
+          label: 'Tag Type',
+          widget: 'select',
+          options: ["default", "error", "info", "warning"],
+          default: 'default'
 
-{{<callout type="info">}}This is my content{{</callout>}}
+        }
+      ],
+
+      pattern: /{{< card link="(.*?)" title="(.*?)" subtitle="(.*?)" image="(.*?)" icon="(.*?)" tag="(.*?)" tagType="(.*?)" >}}$/ms,
+
+      fromBlock: function (match) {
+        return {
+          link: match[1],
+          title: match[2],
+          subtitle: match[3],
+          image: match[4],
+          icon: match[5],
+          tag: match[6],
+          tagType: match[7],
+        };
+      },
+      // Given an object with one property for each field defined in `fields`,
+      // return the string you wish to be inserted into your markdown.
+      //
+      // This is used to serialize the data from the custom widget to the
+      // markdown document
+      toBlock: function (data) {
+        return `{{< card link="${data.link}" title="${data.title}" subtitle="${data.subtitle}" image="${data.image}" icon="${data.icon}" tag="${data.tag}" tagType="${data.tagType}" >}}`;
+      },
+      // Preview output for this component. Can either be a string or a React component
+      // (component gives better render performance)
+      toPreview: function (data) {
+        return `{{< card link="${data.link}" title="${data.title}" subtitle="${data.subtitle}" image="${data.image}" icon="${data.icon}" tag="${data.tag}" tagType="${data.tagType}" >}}`;
+      }
+    });
+  </script>
+</body>
+
+</html>
