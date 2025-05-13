@@ -3,4 +3,4 @@ title: Shortcodes
 ---
 # Testing
 
-{{<callout type="info">}}testing2{{</callout>}}
+{{<callout type="warning">}}This is a warning block!{{</callout>}}
