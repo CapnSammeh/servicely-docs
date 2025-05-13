@@ -1,6 +1,7 @@
 ---
 title: Getting Started
 draft: false
+weight: 1
 ---
 This is some documentation!
 

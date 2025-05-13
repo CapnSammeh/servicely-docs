@@ -2,19 +2,31 @@ baseURL: https://example.org/
 languageCode: en-us
 title: Servicely Docs
 module:
+  hugoVersion:
+    extended: true
   imports:
     - path: github.com/imfing/hextra
+
 
 # Navigation Menu
 menu:
   main:
+    - name: Search
+      params:
+        type: search
+        weight: 2
     - name: Documentation
-      pageRef: /docs
+      pageRef: /docs/getting-started/
       weight: 1
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
 
 # Theme Configuration
 params:
-  # Logo & Title
   navbar:
     displayTitle: true
     displayLogo: true
@@ -22,15 +34,19 @@ params:
       path: images/logo.svg
       dark: images/logo-dark.svg
       link: /
-      width: 30
-
-  # Search
+    width: full
+  page:
+    width: full
+  article:
+    width: full
   search:
     enable: true
     type: flexsearch
     flexsearch:
       index: content
-
-  # Page Settings
-  page:
-    width: full
+      tokenize: forward
+  highlight:
+    copy:
+      enable: true
+      # hover | always
+      display: always

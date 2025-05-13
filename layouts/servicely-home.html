@@ -1,0 +1,17 @@
+{{ define "main" }}
+<style>
+  h1 { color: white !important }
+  p { color: white !important }
+  h3 { color: white !important }
+</style>
+<div class='hx:mx-auto hx:flex {{ partial "utils/page-width" . }}' style="--midnight-blue-400: #02012d; --cornflour-blue: #aad5ff; background-image: radial-gradient(circle farthest-corner at 100% 25%,var(--midnight-blue-400),var(--cornflour-blue)0%,var(--midnight-blue-400)38%,var(--midnight-blue-400)71%)">
+  <div
+    class="hx:w-full hx:break-words hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:pb-8 hx:pt-8 hx:md:pt-12 hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-left),1.5rem)]">
+    <div class="hx:flex hx:flex-col hx:items-start">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{ end }}
+
+

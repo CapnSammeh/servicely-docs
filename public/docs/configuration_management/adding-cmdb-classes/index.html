@@ -10,17 +10,23 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Docs – Servicely Docs</title>
-  <meta name="description" content="" /><link rel="canonical" href="http://localhost:1313/docs/" itemprop="url" />
+<title>Adding CMDB Classes – Servicely Docs</title>
+  <meta name="description" content="Overview Adding a new class requires the creation of a new Servicely table, defining the view definition and then the addition of a record in the CMDBMetadata table. To provide a step by step guide on this, this will be done using a specific scenario. This scenario being; we wish to add a new CI class representing Apple laptops as there are special attributes that we wish to capture that do not belong on the general CMDBLaptop CI class, has enough custom fields to warrant its own table." /><link rel="canonical" href="http://localhost:1313/docs/configuration_management/adding-cmdb-classes/" itemprop="url" />
 
-<meta property="og:title" content="Docs" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/docs/" />
+<meta property="og:title" content="Adding CMDB Classes" />
+<meta property="og:description" content="Overview
+    Adding a new class requires the creation of a new Servicely table, defining the view definition and then the addition of a record in the CMDBMetadata table. To provide  a step by step guide on this, this will be done using a specific scenario. This scenario being; we wish to add a new CI class representing Apple laptops as there are special attributes that we wish to capture that do not belong on the general CMDBLaptop CI class, has enough custom fields to warrant its own table." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/docs/configuration_management/adding-cmdb-classes/" /><meta property="article:section" content="docs" />
 
-  <meta itemprop="name" content="Docs">
+
+
+  <meta itemprop="name" content="Adding CMDB Classes">
+  <meta itemprop="description" content="Overview Adding a new class requires the creation of a new Servicely table, defining the view definition and then the addition of a record in the CMDBMetadata table. To provide a step by step guide on this, this will be done using a specific scenario. This scenario being; we wish to add a new CI class representing Apple laptops as there are special attributes that we wish to capture that do not belong on the general CMDBLaptop CI class, has enough custom fields to warrant its own table.">
+  <meta itemprop="wordCount" content="901">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Docs">
+  <meta name="twitter:title" content="Adding CMDB Classes">
+  <meta name="twitter:description" content="Overview Adding a new class requires the creation of a new Servicely table, defining the view definition and then the addition of a record in the CMDBMetadata table. To provide a step by step guide on this, this will be done using a specific scenario. This scenario being; we wish to add a new CI class representing Apple laptops as there are special attributes that we wish to capture that do not belong on the general CMDBLaptop CI class, has enough custom fields to warrant its own table.">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -138,13 +144,12 @@
       
           <li class="open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/"
     
   >Docs
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
-    </a>
-  <div class="ltr:hx-pr-0 hx-overflow-hidden">
+    </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
         <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
@@ -153,7 +158,7 @@
   >Getting Started
     </a>
               
-            </li><li class="hx-flex hx-flex-col "><a
+            </li><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/configuration_management/"
@@ -162,13 +167,46 @@
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/configuration_management/adding-cmdb-classes/"
     
   >Adding CMDB Classes
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#overview"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Overview</a>
+            </li>
+          <li>
+              <a
+                href="#choose-the-parent-ci-class"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Choose the parent CI class</a>
+            </li>
+          <li>
+              <a
+                href="#create-the-new-cmdb-table"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Create the new CMDB Table</a>
+            </li>
+          <li>
+              <a
+                href="#add-cmdbmetadata-record"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Add CMDBMetadata record</a>
+            </li>
+          <li>
+              <a
+                href="#add-a-cmdb-relationship"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Add a CMDB relationship</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -193,7 +231,7 @@
     
   >Getting Started
     </a></li>
-          <li class=""><a
+          <li class="open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/configuration_management/"
@@ -201,9 +239,9 @@
   >Configuration Management
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/configuration_management/adding-cmdb-classes/"
     
   >Adding CMDB Classes
@@ -236,8 +274,28 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#overview">Overview
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#choose-the-parent-ci-class">Choose the parent CI class
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#create-the-new-cmdb-table">Create the new CMDB Table
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#add-cmdbmetadata-record">Add CMDBMetadata record
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#add-a-cmdb-relationship">Add a CMDB relationship
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -252,15 +310,74 @@
     <article class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]">
       <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
         
-  <div class="hx-mt-1.5 hx-flex hx-items-center hx-gap-1 hx-overflow-hidden hx-text-sm hx-text-gray-500 dark:hx-text-gray-400 contrast-more:hx-text-current"><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Docs</div>
+  <div class="hx-mt-1.5 hx-flex hx-items-center hx-gap-1 hx-overflow-hidden hx-text-sm hx-text-gray-500 dark:hx-text-gray-400 contrast-more:hx-text-current">
+        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
+          <a href="/docs/">Docs</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
+          <a href="/docs/configuration_management/">Configuration Management</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Adding CMDB Classes</div>
   </div>
 
         <div class="content">
-          <h1>Docs</h1>
-          
+          <h1>Adding CMDB Classes</h1>
+          <h2>Overview<span class="hx-absolute -hx-mt-20" id="overview"></span>
+    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Adding a new class requires the creation of a new Servicely table, defining the view definition and then the addition of a record in the CMDBMetadata table. To provide  a step by step guide on this, this will be done using a specific scenario. This scenario being; we wish to add a new CI class representing Apple laptops as there are special attributes that we wish to capture that do not belong on the general CMDBLaptop CI class, has enough custom fields to warrant its own table.</p>
+<h2>Choose the parent CI class<span class="hx-absolute -hx-mt-20" id="choose-the-parent-ci-class"></span>
+    <a href="#choose-the-parent-ci-class" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You can view the existing physical tree by choosing the View Physical CMDB Tree menu item in the CMDB/Administration section of the left hand menu.</p>
+<p>The obvious parent CI class is CMDBLaptop in this scenario, however in other scenarios in my not be as clear. Because CI class inheritance is an is-a relationship the question must be asked if the new CI class really is a version of the parent CI class. You might want to choose CMDBEndUserDevice as the parent CI class, but then you would not have available the attributes on CMDBLaptop and might have to duplicate  them. The general idea is to place the new CI class as low in the tree as it needs to go to make attributes available that it needs.</p>
+<h2>Create the new CMDB Table<span class="hx-absolute -hx-mt-20" id="create-the-new-cmdb-table"></span>
+    <a href="#create-the-new-cmdb-table" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Choose Application/Table/Create new table from the left hand menu, which will open up Form Builder</p>
+<p><img src="cmdb_new_class_1.png" alt="" loading="lazy" /></p>
+<p>Fill in the table details. You can ignore Menu creation for now as it is sometimes unclear how the menu structure should look for CI classes, so choose None for that choice.</p>
+<p>The convention is to give CI classes a name that starts with CMDB to distinguish them from other tables in Servicely. We’ll make the table label CMDB Apple laptop as that fits the naming convention used throughout the CMDB. This will make the table name CMDBAppleLaptop. The label is used as a more friendly version of the table name in the UI.</p>
+<p>We search in the parent table list for CMDB laptop as that is the parent table we want.</p>
+<p>All the settings in the Advanced options panel can be left at their defaults.</p>
+<p><img src="cmdb_new_class_2.png" alt="" loading="lazy" />
+We that has been filled in you can click on the Save table and configure fields button to start adding fields. After clicking we get the add fields modal</p>
+<p><img src="cmdb_new_class_3.png" alt="" loading="lazy" />
+We will add one field named Chip family which will be a Choice field with two possible values: Intel or Apple Silicon. You can use the Choice editor to add the choices at this stage by typing the choice label into the Choice label box and clicking Add/Update. The Choice key and Order will be generated automatically.</p>
+<p>All other settings on the other panels can be left at their defaults</p>
+<p><img src="cmdb_new_class_4.png" alt="" loading="lazy" />
+Click the Create button to add the field. Create and new is a a shortcut for adding the field and then re-presenting the add field modal again to add more, but we only have the one in this scenario.</p>
+<p><img src="cmdb_new_class_5.png" alt="" loading="lazy" />
+You will see that the field has been added to the form. You can modify the form as you wish at this stage but there is an important consideration to not add any other fields to the form from the Available fields list on the right. This is because we are creating a View Definition fragment in this scenario to take advantage of the rollup capability of CMDB forms.</p>
+<p>Click the Save button to save the newly created table to the database. A progress modal will appear.</p>
+<p><img src="cmdb_new_class_6.png" alt="" loading="lazy" /></p>
+<h2>Add CMDBMetadata record<span class="hx-absolute -hx-mt-20" id="add-cmdbmetadata-record"></span>
+    <a href="#add-cmdbmetadata-record" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>When it has finished the form will appear. Note that this will not display the rollup capability until the metadata record has been added to the CMDBMetadata table for the newly created CI class</p>
+<p><img src="cmdb_new_class_7.png" alt="" loading="lazy" />
+Choose the CMDB/Administration/CMDB metadata menu item and you will see the existing records</p>
+<p><img src="cmdb_new_class_8.png" alt="" loading="lazy" />
+Click the New button to create a new record. The create form will open</p>
+<p><img src="cmdb_new_class_9.png" alt="" loading="lazy" /></p>
+<p>The Name by convention is the underlying table name so it will be CMDBAppleLaptop. The Title is by convention is the underlying table label and so it will be CMDB Apple laptop. The logical domain can be Abstract domain for now. It is important that View definition is fragment is set to true for rollup behaviour to work. Icon selection and custom infobox template can be left alone for now as the defaults are acceptable.</p>
+<p><img src="cmdb_new_class_10.png" alt="" loading="lazy" />
+Click Create to create the record</p>
+<p><img src="cmdb_new_class_11.png" alt="" loading="lazy" />
+Now if you go to the  URL /#/CMDBAppleLaptop/_create you will see the rolled up view definition with all the other fields and view definition fragments made available on tabs. You will notice that there is no table for CMDB Laptop - this is because it currently has no fields. In one were added then a tab would appear automatically.</p>
+<p><img src="cmdb_new_class_12.png" alt="" loading="lazy" /></p>
+<h2>Add a CMDB relationship<span class="hx-absolute -hx-mt-20" id="add-a-cmdb-relationship"></span>
+    <a href="#add-a-cmdb-relationship" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Let’s create an Apple laptop and add a relationship between it and a router. Fill in the form as follows and click Create.</p>
+<p>Go to the URL /#/CMDBRouter/_create and fill in the form as follows and click Create</p>
+<p><img src="cmdb_new_class_14.png" alt="" loading="lazy" />
+Go to the menu item CMDB/Relationships/New relationship and fill in the form as follows and click Create</p>
+<p><img src="cmdb_new_class_15.png" alt="" loading="lazy" />
+Go to the list of all CMDB Apple laptops by going to the URL /#/CMDBAppleLaptop</p>
+<p><img src="cmdb_new_class_16.png" alt="" loading="lazy" />
+Click on the first record and you will see the record form. It now has one relationship</p>
+<p><img src="cmdb_new_class_17.png" alt="" loading="lazy" />
+View related CIs
+Click on the View related items button to see the CMDB diagram</p>
+<p><img src="cmdb_new_class_18.png" alt="" loading="lazy" /></p>
+
         </div>
         <div class="hx-mt-16"></div>
-        
+        <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
+        href="/docs/configuration_management/cmdb-permissions/"
+        title="CMDB Permissions"
+        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
+      >CMDB Permissions<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
