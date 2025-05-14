@@ -1,0 +1,10 @@
+[build]
+  command = "hugo --gc --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "YOUR_HUGO_VERSION"
+
+[dev]
+    comand = "hugo server --buildDrafts --disableFastRender"
+    port = 1313

@@ -6,6 +6,7 @@ backend:
 media_folder: /static/images
 public_folder: /images
 publish_mode: editorial_workflow
+show_preview_links: true
 collections:
   - name: docs
     label: Documents
