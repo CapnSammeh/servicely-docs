@@ -2,5 +2,7 @@
 title: Configuration Management
 cascade:
   type: docs
+draft: false
 ---
-test
+
+{{< childpages >}}

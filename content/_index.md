@@ -19,7 +19,7 @@ Servicely product documentation including out-of-box configuration
 </div>
 
 <div class="hx-mt-6 hx-mb-6">
-{{< hextra/hero-button text="Get Started" link="/docs/getting-started/" >}}
+{{< hextra/hero-button text="Get Started" link="/docs/" >}}
 </div>
 
 {{< /hextra/hero-container >}}
