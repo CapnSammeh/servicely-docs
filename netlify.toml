@@ -9,5 +9,5 @@
   comand = "hugo server --buildDrafts --disableFastRender"
   targetPort = 1313
 
-[context.branch-deploy]
+[context.deploy-preview]
   command = "hugo server --buildDrafts --disableFastRender"
