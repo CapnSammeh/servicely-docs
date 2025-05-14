@@ -5,13 +5,13 @@ backend:
   branch: master
 media_folder: /static/images
 public_folder: /images
+publish_mode: editorial_workflow
 collections:
   - name: docs
     label: Documents
     label_singular: 'Document'
     folder: content/docs
     create: true
-    publish_mode: editorial_workflow
     nested:
       depth: 100
       summary: '{{title}}'
