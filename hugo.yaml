@@ -1,4 +1,4 @@
-baseURL: https://example.org/
+baseURL: https://servicely-docs.netlify.app
 languageCode: en-us
 title: Servicely Docs
 module:
