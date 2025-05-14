@@ -12,6 +12,7 @@ collections:
     label: Documents
     label_singular: 'Document'
     folder: content/docs
+    preview_path: 'https://devserver-master--servicely-docs.netlify.app/{{_index}}'
     create: true
     nested:
       depth: 100
