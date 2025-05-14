@@ -1,12 +1,33 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Regular.otf");
+}
+
+@font-face {
+  font-family: "NewBlack";
+  src: url("/assets/fonts/NewBlackTypeface-Regular.otf") format("opentype")
+}
+
 :root {
   --primary-hue: 33deg;
   --primary-saturation: 98%;
   --primary-lightness: 63%;
 }
 
-.content {
-  /* font-family: "Times New Roman", Times, serif; */
+.content > h1, h2, h3 {
+  font-family: "NewBlack", sans-serif;
 }
+
+.content > p {
+  font-family: "Satoshi", sans-serif;
+}
+
+.content {
+  font-family: "Satoshi", sans-serif;
+}
+
+/* Headings in New Black */
+/* Body in Satoshi */
 
 .nav-container-blur {
     background: #C9E4FF
