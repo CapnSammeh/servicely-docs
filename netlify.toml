@@ -3,7 +3,7 @@
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "YOUR_HUGO_VERSION"
+  HUGO_VERSION = "0.147.3"
 
 [dev]
     comand = "hugo server --buildDrafts --disableFastRender"
