@@ -7,4 +7,4 @@
 
 [dev]
     comand = "hugo server --buildDrafts --disableFastRender"
-    port = 1313
+    targetPort = 1313
