@@ -10,4 +10,4 @@
   targetPort = 1313
 
 [context.deploy-preview]
-  command = "hugo server --buildDrafts --disableFastRender"
+  command = "hugo --buildDrafts --gc --minify"
