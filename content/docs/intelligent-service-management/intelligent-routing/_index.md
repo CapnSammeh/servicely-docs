@@ -8,11 +8,11 @@ Intelligent Routing offers a means for administrators to define rules surroundin
 
 Intelligent Routing leverages Round-Robin assignment based on one of the below configurable routing rules:
 
-* [Active Ticket Count](#active_ticket_count)
-* [Ticket Priority Volumes](#Ticket_Priority_Volumes)
-* [Time since last Assignment](#Time_since_last_Assignment)
-* [Static Routing](#Static_Routing)
-* [Custom Routing](#Custom_Routing)
+* [Active Ticket Count](#active-ticket-count)
+* [Ticket Priority Volumes](#ticket-Priority-Volumes)
+* [Time since last Assignment](#Time-since-last-Assignment)
+* [Static Routing](#Static-Routing)
+* [Custom Routing](#Custom-Routing)
 
 Intelligent Routing in Servicely allows Administrators to configure the Active State of the Rule, the Order of execution (considering other rules for the same table), the applicable Groups to perform routing within, and also respects the User's `assignment selectability` to ensure that only the appropriate users are routed tickets.
 
