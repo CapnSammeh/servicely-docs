@@ -1,7 +1,7 @@
 ---
-date: '2025-05-15T08:01:13+10:00'
-draft: true
-title: 'Activating email auto replies for closed tickets'
+date: 2025-05-15T08:01:13+10:00
+title: Activating email auto replies for closed tickets
+draft: false
 ---
 
 # Overview
