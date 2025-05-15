@@ -19,6 +19,9 @@ menu:
     - name: Documentation
       pageRef: /docs/
       weight: 1
+    - name: Community
+      pageRef: https://www.google.com
+      weight: 1
 
 markup:
   # allow raw html
